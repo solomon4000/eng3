@@ -16,8 +16,7 @@ switch2 = DigitalInOut(board.D8)
 # Create a servo object, my_servo.
 my_servo = servo.Servo(pwm)
 
-while True:
-    while switch:
-        angle--;
-        my_servo.angle = angle
-        time.sleep(0.05)
+while switch:
+    angle--
+    my_servo.angle = angle
+    time.sleep(0.05)
