@@ -28,13 +28,7 @@ while True:
 
 ### Evidence
 
-
-![spinningMetro_Optimized](https://user-images.githubusercontent.com/54641488/192549584-18285130-2e3b-4631-8005-0792c2942f73.gif)
-
-
-
-Here is what board I am using, don't have VsCode installed on this computer so I cant show it working.
-Image credit goes to [Rick A](https://www.youtube.com/watch?v=dQw4w9WgXcQ&scrlybrkr=8931d0bc)
+//Note to self: please update this later
 
 
 
@@ -42,86 +36,15 @@ Image credit goes to [Rick A](https://www.youtube.com/watch?v=dQw4w9WgXcQ&scrlyb
 There is zero wiring for this assignment as it is a test program to pring to the serial monitor.
 
 ### Reflection
-It was super difficult to get everything setup. 
+It was super difficult to get everything setup. The programing was super easy for me to do but getting the board to work properley took a solid 3 and a half hours. I am so glad that we got it working however as now I can save my work to here and there is zero chance of me loosing it. I was so done with using the web based IDE that would barely ran, was full of bugs, and didn't save my work half the time. 
 
 
 
 
-## How To Fix the LCD power issue with Metro M4 boards.
-
-### Description & Code
-
-* **The symptoms:**  LCD acting weird OR trouble with usb connection / serial monitor / uploading / etc.
-* **The problem :** The LCDs occasionally draw too much power when we turn on the boards, and that makes parts of its serial communications crash.
-* **The Solution:** Add this code, and wire a switch up, like the wiring diagram below:
-
-
-
-```python
-import board
-import time
-import digitalio
-from lcd.lcd import LCD
-from lcd.i2c_pcf8574_interface import I2CPCF8574Interface
-
-# turn on lcd power switch pin
-lcdPower = digitalio.DigitalInOut(board.D8)
-lcdPower.direction = digitalio.Direction.INPUT
-lcdPower.pull = digitalio.Pull.DOWN
-
-# Keep the I2C protocol from running until the LCD has been turned on
-# You need to flip the switch on the breadboard to do this.
-while lcdPower.value is False:
-    print("still sleeping")
-    time.sleep(0.1)
-
-# Time to start up the LCD!
-time.sleep(1)
-print(lcdPower.value)
-print("running")
-
-i2c = board.I2C()
-lcd = LCD(I2CPCF8574Interface(i2c, 0x27), num_rows=2, num_cols=16)
-
-
-# Loop forever.
-while True:
-
-```
-### Wiring
-
-![WiringSolution](images/I2C_M4_Solution.png)
-
-
-
-
-
-
-## CircuitPython_LCD
+## Servo motor/sweep
 
 ### Description & Code
-
-```python
-Code goes here
-
-```
-
-### Evidence
-
-Pictures / Gifs of your work should go here.  You need to communicate what your thing does.
-
-### Wiring
-
-### Reflection
-
-
-
-
-
-## NextAssignment
-
-### Description & Code
-
+For this assignment I was tasked with writing a program that would sweep a servo back and forth. After I got that working I needed to control a servo with either buttons or capacitive touch. Now because the buttons on this thing are so complicated I ended up having to use capacitive touch. Capacitive touch is when you touch a wire and it creates a tiny capacitor between you and ground which will result in a current sike that can be detected by the microcontroller/processor.  
 ```python
 Code goes here
 
