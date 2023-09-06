@@ -41,7 +41,7 @@ It was super difficult to get everything setup. The programing was super easy fo
 
 
 
-## CircuitPython Servo
+## CircuitPython_Servo
 
 ### Description & Code
 For this assignment I was tasked with writing a program that would sweep a servo back and forth. After I got that working I needed to control a servo with either buttons or capacitive touch. Now because the buttons on this thing are so complicated I ended up having to use capacitive touch. Capacitive touch is when you touch a wire and it creates a tiny capacitor between you and ground which will result in a current sike that can be detected by the microcontroller/processor. I almost got this to work but accidentaly used a continuos rotation servo. I tried swapping the servos but the two that I picked out were both really broken. One of them had a screw that was ground to dust with an angle grinder and the other one was jammed inside.
