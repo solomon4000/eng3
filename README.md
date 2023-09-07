@@ -1,34 +1,91 @@
-# CPyProjectTemplate
-Put a description for your project here!
-This repo is a template VS code project for CircuitPython projects that automatically uploads your code to the board when you press F5. Requires F5Anything extension.
-## What does this do?
-This makes it easirt to develop for boards like 
-## Use
-### Every new project:
-1. Make a GitHub account if you don't have one with your normal school credentials and sign into it.
-2. Click the big green Use This Template button at the top of this page.
-3. Name the new repository something appropriate to the purpose of your project (Your first one should probably be named `Engr3`).
-4. Hit "Create repository from template." (The default settings should be fine.)
-5. Open VS Code on your machine. Click Clone Repository. If it doesn't show up, hit Ctrl+Shift+P and then type Clone, then hit Enter.
-6. Paste in the link to the new repository you've just created from the template and hit enter.
-7. For the location, Documents folder.
-8. Hit "Open Cloned Directory" in the bottom-left corner.
-9. Install the reccomended extensions when you get that popup in the lower right corner. IF the pop-up dissapears before you can click it, hit the tiny bell icon in the lower left corner to bring it back.
-### To commit from VS Code:
-1. Go to the little branch icon in the left bar of VS Code.
-2. Click the + icon next to the files you want to commit.
-3. Write a message that descibes your changes in the "Message" box and hit commit.
-4. If you get an error about user.name and user.email, see the next section.
-5. Click the "Sync changes" button.
-### If you get an error about user.name and user.email
-1. In VS Code, hit `` Ctrl+Shift+` ``
-2. Filling in your actual information, run the following commands one line at a time. The paste shortcut is `Ctrl+V` or you can right click then hit paste. Spelling must match exactly:
+# CircuitPython
+This repository will actually serve as an aid to help you get started with your own template.  You should copy the raw form of this readme into your own, and use this template to write your own.  If you want to draw inspiration from other classmates, feel free to check [this directory of all students!](https://github.com/chssigma/Class_Accounts).
+## Table of Contents
+* [Table of Contents](#TableOfContents)
+* [Hello_CircuitPython](#Hello_CircuitPython)
+* [CircuitPython_Servo](#CircuitPython_Servo)
+* [CircuitPython_LCD](#CircuitPython_LCD)
+* [NextAssignmentGoesHere](#NextAssignment)
+---
+
+## Hello_CircuitPython
+
+### Description & Code
+I basicaly just wrote this to get my board to work and connect to VsCode. 
+It took longer than I had hoped for this to work but im glad that I got it to work.
+The software should be a lot more powerfull than an arduino. 
+It's comparing an ARM procesor core to a random 2008 microcontroller.
+
+```python
+from time import sleep
+
+while True:
+    print("Hello world!")
+    sleep(1)
+
 ```
-git config --global user.name YOURGITHUBUSERNAME
-git config --global user.email YOURSCHOOLEMAIL
+
+
+### Evidence
+
+//Note to self: please update this later
+
+
+
+### Wiring
+There is zero wiring for this assignment as it is a test program to pring to the serial monitor.
+
+### Reflection
+It was super difficult to get everything setup. The programing was super easy for me to do but getting the board to work properley took a solid 3 and a half hours. I am so glad that we got it working however as now I can save my work to here and there is zero chance of me loosing it. I was so done with using the web based IDE that would barely ran, was full of bugs, and didn't save my work half the time. 
+
+
+
+
+## Servo motor/sweep
+
+### Description & Code
+For this assignment I was tasked with writing a program that would sweep a servo back and forth. After I got that working I needed to control a servo with either buttons or capacitive touch. Now because the buttons on this thing are so complicated I ended up having to use capacitive touch. Capacitive touch is when you touch a wire and it creates a tiny capacitor between you and ground which will result in a current sike that can be detected by the microcontroller/processor. I almost got this to work but accidentaly used a continuos rotation servo. I tried swapping the servos but the two that I picked out were both really broken. One of them had a screw that was ground to dust with an angle grinder and the other one was jammed inside.
+```python
+# SPDX-FileCopyrightText: 2018 Kattni Rembor for Adafruit Industries
+#towihriuweqhruiywqegr8owrge tesyt tests tetstets tst estsetsetset tsstese test
+# SPDX-License-Identifier: MIT
+
+"""CircuitPython Essentials Servo standard servo example"""
+import touchio
+import time
+import board
+import pwmio
+from adafruit_motor import servo
+from digitalio import DigitalInOut, Direction, Pull
+angle=0
+# create a PWMOut object on Pin A2.
+pwm = pwmio.PWMOut(board.A2, duty_cycle=2 ** 15, frequency=50)
+# Create a servo object, my_servo.
+my_servo = servo.Servo(pwm)
+touch_pad = board.A0  # Will not work for Circuit Playground Express!
+touch_pad2=board.A1
+touch = touchio.TouchIn(touch_pad)
+touch2 = touchio.TouchIn(touch_pad2)
+
+while True:
+    if touch.value:
+        if angle>=180:
+            angle=0
+        angle=angle-1
+        my_servo.angle = angle
+    if touch2.value:
+        if angle<=0:
+            angle=179
+        angle=angle+1
+        my_servo.angle = angle
+    time.sleep(0.05)
+
 ```
-3. Return to the previous section.
-### To install a library:
-1. Get the library files from the Adafruit bundle (probably a .mpy file or a folder.)
-2. Copy them to the lib folder *in your project's folder, usually in Documents.* **Don't copy to the lib folder on the board! It will not work!**
-3. Hit F5 and the library will be uplaoded to the board.
+
+### Evidence
+Here is a video that I recorded with canvas
+[Sweeping Servo]([https://user-images.githubusercontent.com/54641488/192549584-18285130-2e3b-4631-8005-0792c2942f73.gif](https://github.com/solomon4000/eng3/blob/main/CircuitPython%20Servo_%20Solomon%20Lam%20(He_Him)%20-%20Google%20Chrome%202023-09-04%2013-47-12.mp4)https://github.com/solomon4000/eng3/blob/main/CircuitPython%20Servo_%20Solomon%20Lam%20(He_Him)%20-%20Google%20Chrome%202023-09-04%2013-47-12.mp4)
+
+### Wiring
+
+### Reflection
