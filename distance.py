@@ -4,17 +4,21 @@
 import time
 import board
 import adafruit_hcsr04
-sonar = adafruit_hcsr04.HCSR04(trigger_pin=board.D5, echo_pin=board.D6)
+sonar = adafruit_hcsr04.HCSR04(board.D5, board.D6)
 import neopixel
 
-led = neopixel.NeoPixel(board.NEOPIXEL, 1)
+pixel_pin = board.A0
+num_pixels = 8
 
-led.brightness = 1.0
+pixels = neopixel.NeoPixel(pixel_pin, num_pixels, brightness=0.3, auto_write=False)
+cm = 10
 while True:
     try:
-        print((sonar.distance,))
+        cm = sonar.distance
+        print(cm)
+        led=(0, cm, 255-cm)
     except RuntimeError:
         print("Retrying!")
     time.sleep(0.1)
-    led=(0, sonar.distance, 255-sonar.distance) 
+    
     
