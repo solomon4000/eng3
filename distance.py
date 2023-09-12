@@ -10,13 +10,21 @@ import neopixel
 pixel_pin = board.A0
 num_pixels = 8
 
-pixels = neopixel.NeoPixel(pixel_pin, num_pixels, brightness=0.3, auto_write=False)
+pixels = neopixel.NeoPixel(pixel_pin, num_pixels, brightness=1.0, auto_write=False)
 cm = 10
+#led=(255,255,255)
+def god_save_me(color):
+    for i in range(num_pixels):
+            pixels[i] = color
+            pixels.show()
 while True:
     try:
         cm = sonar.distance
         print(cm)
-        led=(0, cm, 255-cm)
+        distancebasedcolor=(0, 255-cm*1.5, cm*2)
+        print(distancebasedcolor)
+        god_save_me(distancebasedcolor)
+        time.sleep(0.1)
     except RuntimeError:
         print("Retrying!")
     time.sleep(0.1)
