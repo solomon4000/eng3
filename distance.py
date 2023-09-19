@@ -6,18 +6,25 @@ import board
 import adafruit_hcsr04
 sonar = adafruit_hcsr04.HCSR04(board.D5, board.D6)
 import neopixel
+import digitalio
 
+led = digitalio.DigitalInOut(board.D4)
 pixel_pin = board.A0
 num_pixels = 8
 
 pixels = neopixel.NeoPixel(pixel_pin, num_pixels, brightness=0.3, auto_write=False)
 cm = 10
 #led=(255,255,255)
+led.direction = digitalio.Direction.OUTPUT
 def god_save_me(color):
     for i in range(num_pixels):
             pixels[i] = color
             pixels.show()
 while True:
+    led=True
+    time.sleep(0.1)
+    led=False
+    time.sleep(0.1)
     try:
         cm = sonar.distance
         print(cm)

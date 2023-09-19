@@ -10,7 +10,7 @@
     "python.analysis.extraPaths": [
         "c:\\Users\\slam60\\.vscode\\extensions\\joedevivo.vscode-circuitpython-0.1.20-win32-x64\\boards\\0x239A\\0x8014",
         "c:\\Users\\slam60\\.vscode\\extensions\\joedevivo.vscode-circuitpython-0.1.20-win32-x64\\stubs",
-        "c:\\Users\\slam60\\AppData\\Roaming\\Code\\User\\globalStorage\\joedevivo.vscode-circuitpython\\bundle\\20230912\\adafruit-circuitpython-bundle-py-20230912\\lib"
+        "c:\\Users\\slam60\\AppData\\Roaming\\Code\\User\\globalStorage\\joedevivo.vscode-circuitpython\\bundle\\20230918\\adafruit-circuitpython-bundle-py-20230918\\lib"
     ],
     "python.analysis.typeCheckingMode": "basic"
 }
