@@ -96,16 +96,48 @@ This assignment in all honesty wasn't to difficult. This wasn't nearly as hard a
 ## CircuitPython_Ultrasonic_Sensor
 
 ### Description & Code Snippets
-Write a couple sentences here, describing this assignment, and make sure that you hit these two points:
-* What was the goal of the assignment?
-* How did you accomplish that goal?
-  How you accomplished the goal is NOT a reflection, it is you telling the reader how to do this assignment, in broad strokes.
-
-  Your description is the right place to draw the reader's attention to any important chunks of code. Here's how you make code look like code:
+The goal of this assignment was to use an Adafruit metro to read the distance of something with an ultrasonic sensor and use it to write to a neopixel. I accomplished it by having it increase one value and decrease the other depending on the distance.
 
 ```python
-Code goes here
+# SPDX-FileCopyrightText: 2021 ladyada for Adafruit Industries
+# SPDX-License-Identifier: MIT
 
+import time
+import board
+import adafruit_hcsr04
+sonar = adafruit_hcsr04.HCSR04(board.D5, board.D6)
+import neopixel
+import digitalio
+
+led = digitalio.DigitalInOut(board.D4)
+pixel_pin = board.A0
+num_pixels = 8
+
+pixels = neopixel.NeoPixel(pixel_pin, num_pixels, brightness=0.3, auto_write=False)
+cm = 10
+#led=(255,255,255)
+led.direction = digitalio.Direction.OUTPUT
+def god_save_me(color):
+    for i in range(num_pixels):
+            pixels[i] = color
+            pixels.show()
+while True:
+    led=True
+    time.sleep(0.1)
+    led=False
+    time.sleep(0.1)
+    try:
+        cm = sonar.distance
+        print(cm)
+        distancebasedcolor=(0, 255-cm*2, cm*2)
+        print(distancebasedcolor)
+        god_save_me(distancebasedcolor)
+        #time.sleep(0.1)
+    except RuntimeError:
+        print("Retrying!")
+    #time.sleep(0.1)
+    
+    
 ```
 
 **Lastly, please end this section with a link to your code or file.**  
