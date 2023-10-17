@@ -5,7 +5,7 @@ This repository will actually serve as an aid to help you get started with your 
 * [Hello_CircuitPython](#Hello_CircuitPython)
 * [CircuitPython_Servo](#CircuitPython_Servo)
 * [CircuitPython_LCD](#CircuitPython_LCD)
-* [NextAssignmentGoesHere](#NextAssignment)
+* [NextAssignmentGoesHere](#MotorControl)
 ---
 
 ## Hello_CircuitPython
@@ -144,52 +144,41 @@ while True:
 
 
 ### Evidence
-Pictures / Gifs of your finished work should go here.  You need to communicate what your thing does.
-For making a GIF, I recommend [ezgif.com](https://www.ezgif.com) Remember you can insert pictures using Markdown or HTML to insert an image.
-
-
-And here is how you should give image credit to someone if you use their work:
-
-Image credit goes to [Rick A](https://www.youtube.com/watch?v=dQw4w9WgXcQ&scrlybrkr=8931d0bc)
+![image](https://github.com/solomon4000/eng3/blob/main/ezgif.com-video-to-gif.gif) 
 
 
 
 ### Wiring
-[tinkercad.com](https://www.tinkercad.com/learn/circuits).  If you can't find the particular part you need, get creative, and just drop a note into the circuit diagram, explaining.
-For example, I use an Arduino Uno to represent my Circuitpython device but write a note saying which board I'm actually using.
-Then post an image here.   [Here's a quick tutorial for all markdown code, like making links](https://guides.github.com/features/mastering-markdown/)
+![capture](https://github.com/solomon4000/eng3/blob/main/Capture.PNG)
 
 
 ### Reflection
-Don't just tell the reader what went wrong or was challenging!  Describe how you figured it out, share the things that helped you succeed (tutorials, other people's repos, etc.), and then share what you learned from that experience.  **Your underlying goal for the reflection, is to concisely pass on the RIGHT knowledge that will help the reader recreate this assignment better or more easily.  Pass on your wisdom!**
+This assignment was absurdly difficult. This is because it would bug out and crash every time. I spent two block days just trying to get my code to upload. I am not sure how I maneged to actualy do this in the end. It was way to hard for me to do because it would not cooperate. I found the best way to do it is to install a clean operating system to the board. I did not like this assignment at all and spent so much time on this.
 
 
 
 
 
-## NextAssignment
+## MotorControl
 
 ### Description & Code Snippets
-Write a couple sentences here, describing this assignment, and make sure that you hit these two points:
-* What was the goal of the assignment?
-* How did you accomplish that goal?
-  How you accomplished the goal is NOT a reflection, it is you telling the reader how to do this assignment, in broad strokes.
-
-  Your description is the right place to draw the reader's attention to any important chunks of code. Here's how you make code look like code:
-
+The goal of this assignment is to make a Adafruit Metro control a motor with a potentiometer. It will spin faster the more you turn it one way and if you turn it backwards it will spin the other way. It required around 8 lines of code to write. It was way easier than last time. I am glad we used a power MOSFET instead of a to-92 BJT. I don't think you can drive any bigger of a motor with a 2n2222.
 ```python
-Code goes here
+import board
+import analogio
+
+motor=analogio.AnalogOut(board.A0)
+pot=analogio.AnalogIn(board.A1)
+while True:
+    speed=pot.value
+    motor.value=pot.value
 
 ```
-
-**Lastly, please end this section with a link to your code or file.**  
 
 ### Evidence
 
 ### Wiring
-[tinkercad.com](https://www.tinkercad.com/learn/circuits).  If you can't find the particular part you need, get creative, and just drop a note into the circuit diagram, explaining.
-For example, I use an Arduino Uno to represent my Circuitpython device but write a note saying which board I'm actually using.
-Then post an image here.   [Here's a quick tutorial for all markdown code, like making links](https://guides.github.com/features/mastering-markdown/)
-### Reflection
-Don't just tell the reader what went wrong or was challenging!  Describe how you figured it out, share the things that helped you succeed (tutorials, other people's repos, etc.), and then share what you learned from that experience.  **Your underlying goal for the reflection, is to concisely pass on the RIGHT knowledge that will help the reader recreate this assignment better or more easily.  Pass on your wisdom!**
+![image](https://github.com/solomon4000/eng3/assets/90640484/d0d37feb-503e-4b8c-adf3-99a193652d14)
 
+### Reflection
+I didn't spend any time on this. I maneged to get it complete within a couple minutes. It was realy easy except for the fact that I couldn't remeber what was the gate/drain/source.
