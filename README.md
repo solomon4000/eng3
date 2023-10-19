@@ -182,3 +182,8 @@ while True:
 
 ### Reflection
 I didn't spend any time on this. I maneged to get it complete within a couple minutes. It was realy easy except for the fact that I couldn't remeber what was the gate/drain/source.
+
+## Onhape_Swing_arm
+
+### Description
+The purpose of this assingment was to 3D model a mystery part with just some drawings. It was very trivial due to the fact that it 
