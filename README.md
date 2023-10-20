@@ -153,7 +153,10 @@ while True:
 
 
 ### Reflection
-This assignment was absurdly difficult. This is because it would bug out and crash every time. I spent two block days just trying to get my code to upload. I am not sure how I maneged to actualy do this in the end. It was way to hard for me to do because it would not cooperate. I found the best way to do it is to install a clean operating system to the board. I did not like this assignment at all and spent so much time on this.
+This assignment was absurdly difficult. This is because it would bug out and crash every time. 
+I spent two block days just trying to get my code to upload. I am not sure how I maneged to actualy do this in the end. 
+It was way to hard for me to do because it would not cooperate. I found the best way to do it is to install a clean operating system to the board.
+I did not like this assignment at all and spent so much time on this.
 
 
 
@@ -162,7 +165,10 @@ This assignment was absurdly difficult. This is because it would bug out and cra
 ## MotorControl
 
 ### Description & Code Snippets
-The goal of this assignment is to make a Adafruit Metro control a motor with a potentiometer. It will spin faster the more you turn it one way and if you turn it backwards it will spin the other way. It required around 8 lines of code to write. It was way easier than last time. I am glad we used a power MOSFET instead of a to-92 BJT. I don't think you can drive any bigger of a motor with a 2n2222.
+The goal of this assignment is to make a Adafruit Metro control a motor with a potentiometer. 
+It will spin faster the more you turn it one way and if you turn it backwards it will spin the other way. 
+It required around 8 lines of code to write. It was way easier than last time.
+I am glad we used a power MOSFET instead of a to-92 BJT. I don't think you can drive any bigger of a motor with a 2n2222.
 ```python
 import board
 import analogio
@@ -181,9 +187,29 @@ while True:
 ![image](https://github.com/solomon4000/eng3/assets/90640484/d0d37feb-503e-4b8c-adf3-99a193652d14)
 
 ### Reflection
-I didn't spend any time on this. I maneged to get it complete within a couple minutes. It was realy easy except for the fact that I couldn't remeber what was the gate/drain/source.
+I didn't spend any time on this. I maneged to get it complete within a couple minutes. 
+It was realy easy except for the fact that I couldn't remeber what was the gate/drain/source.
 
 ## Onhape_Swing_arm
 
 ### Description
-The purpose of this assingment was to 3D model a mystery part with just some drawings. It was very trivial due to the fact that it 
+The purpose of this assingment was to 3D model a mystery part with just some drawings. 
+It was very trivial due to the fact that it was very simple shapes that I had to create. 
+I maneged to get this done in around one day. I did pretty good.
+
+### Evidence
+![image](https://github.com/solomon4000/eng3/assets/90640484/6d55901b-84fb-4cec-8aae-34033f36d4f3)
+
+### Part link 
+[Document](https://cvilleschools.onshape.com/documents/defe20b1b9dc44ffe5f45cb8/w/382815002ab9d6151072951e/e/53fc0df9791c9142b67e38cc)
+
+### Reflection
+This asignment was pretty easy for me to do. I learned to pay closer attention to the details. 
+This is because I thought I had mirrored one of the holes and I was completley oblivious to the fact that I forgot. 
+This is a reminder to me and others to try and open your eyes a bit when you are concentrating really hard as it is most likely something rather obvious.
+
+##Mark down guide
+~~strikethrough~~
+*Italic*
+**Bold**
+
