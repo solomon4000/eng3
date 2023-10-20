@@ -209,7 +209,7 @@ This asignment was pretty easy for me to do. I learned to pay closer attention t
 This is because I thought I had mirrored one of the holes and I was completley oblivious to the fact that I forgot. 
 This is a reminder to me and others to try and open your eyes a bit when you are concentrating really hard as it is most likely something rather obvious.
 
-##Mark down guide
+## Mark down guide
 ~~strikethrough~~
 *Italic*
 **Bold**
