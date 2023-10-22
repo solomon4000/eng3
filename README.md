@@ -183,7 +183,7 @@ while True:
 ```
 
 ### Evidence
-
+![video](https://drive.google.com/file/d/14ck8YZ2rQx7RsFLB73tYePxirN_MLrNF/view?usp=share_link)
 ### Wiring
 ![image](https://github.com/solomon4000/eng3/assets/90640484/d0d37feb-503e-4b8c-adf3-99a193652d14)
 
@@ -199,18 +199,31 @@ It was very trivial due to the fact that it was very simple shapes that I had to
 I maneged to get this done in around one day. I did pretty good.
 
 ### Evidence
-![image](https://github.com/solomon4000/eng3/assets/90640484/6d55901b-84fb-4cec-8aae-34033f36d4f3)
+![image](https://github.com/solomon4000/eng3/assets/90640484/0c159551-2582-4987-93ef-6ad954d52f0d)
+
 
 ### Part link 
 [Document](https://cvilleschools.onshape.com/documents/defe20b1b9dc44ffe5f45cb8/w/382815002ab9d6151072951e/e/53fc0df9791c9142b67e38cc)
 
 ### Reflection
 This asignment was pretty easy for me to do. I learned to pay closer attention to the details. 
-This is because I thought I had mirrored one of the holes and I was completley oblivious to the fact that I forgot. 
-This is a reminder to me and others to try and open your eyes a bit when you are concentrating really hard as it is most likely something rather obvious.
+This is because I thought that simply changing one dimension would be all that is neccesary to get it to change. 
+When I attempted this however all of the other lines/angles changed because nothing was constrained properly. 
+In order to have a good outcome you have to make sure that each angle is related to the other in the right way, 
+or else it will completley mess up when you try to modify one variable.
 
-## Mark down guide
-~~strikethrough~~
-*Italic*
-**Bold**
+## Onshape_Hanger
+
+### Description
+The prupose of this assignment was to build a 3D model of another mysterious part to practice designing things from 2D drawings in Onshape.
+I liked it as it helped me shapen my rusty Onshape skills.
+### Evidence
+![image](https://github.com/solomon4000/eng3/assets/90640484/6d55901b-84fb-4cec-8aae-34033f36d4f3)
+
+### Document Link
+[Document](https://cvilleschools.onshape.com/documents/defe20b1b9dc44ffe5f45cb8/w/382815002ab9d6151072951e/e/53fc0df9791c9142b67e38cc)
+
+### Reflection
+This asignment was also rather easy for me to do. It only took me one class period for me to complete this assignment. 
+One lesson I learned was to pay attention to small details. I went checking every filet, extrude, and hole only to realize that I forgot to mirror two features. I spent a lot of time trying to figure out what the problem was but I did eventualy realize that I forgot to mirror something even though it looked completley right to my brain.
 
