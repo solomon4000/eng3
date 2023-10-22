@@ -15,8 +15,6 @@ This repository will actually serve as an aid to help you get started with your 
 I basically just wrote this to get my board to work and connect to VsCode. 
 It took longer than I had hoped for this to work but im glad that I got it to work.
 The software should be a lot more powerful than an Arduino. 
-It compares an ARM processor core to a random 2008 microcontroller.
-
 ```python
 from time import sleep
 
@@ -29,7 +27,8 @@ while True:
 
 ### Evidence
 
-//Note to self: Please update this later
+![image](https://github.com/solomon4000/eng3/assets/90640484/519774d0-49d0-4d0e-a8ad-c077aa374fba)
+
 
 
 
@@ -38,8 +37,6 @@ There is zero wiring for this assignment as it is a test program to print to the
 
 ### Reflection
 It was super difficult to get everything set up. The programming was super easy for me to do but getting the board to work properly took a solid 3 and a half hours. I am so glad that we got it working however now I can save my work here and there is zero chance of me losing it. I was so done with using the web-based IDE that would barely run, was full of bugs, and didn't save my work half the time. 
-
-
 
 
 ## CircuitPython_Servo
