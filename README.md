@@ -180,7 +180,7 @@ while True:
 ```
 
 ### Evidence
-![video](https://drive.google.com/file/d/14ck8YZ2rQx7RsFLB73tYePxirN_MLrNF/view?usp=share_link)
+[video](https://drive.google.com/file/d/14ck8YZ2rQx7RsFLB73tYePxirN_MLrNF/view?usp=share_link)
 ### Wiring
 ![image](https://github.com/solomon4000/eng3/assets/90640484/d0d37feb-503e-4b8c-adf3-99a193652d14)
 
