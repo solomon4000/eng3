@@ -240,6 +240,14 @@ This is one of those assignments I don't like to do, not because of how difficul
 ## Onshape_Pliers
 
 ### Description
-The purpose of this assignment was to make a pair of pliers in an assembaly. I was given the parts that I needed so that if I did the assembaly right it would consistently be correct. I did not like this assignment as like last time it was doing one assignment multiple times 
+The purpose of this assignment was to make a pair of pliers in an assembaly. I was given the parts that I needed so that if I did the assembaly right it would consistently be correct. I did not like this assignment as like last time it was doing one assignment multiple times.
+
+### Evidence
+![image](https://github.com/solomon4000/eng3/assets/90640484/d193987d-d533-47fd-97ad-025397397524)
 
 
+### Description
+[Document](https://cvilleschools.onshape.com/documents/a3e877a128ffd4c685250757/w/b4915ca675761f21034702f9/e/96ee70b03795abed110595d8)
+
+### Reflection
+This is another assignment that took a long time because I had to make a copy of one thing and make a slight variation of it each time. I would rather be doing one assignment that is more complicated like an engine, mechanical transmission or turbojet, because it would be really satisfying in the end seeing the result.
