@@ -224,3 +224,22 @@ I liked it as it helped me shapen my rusty Onshape skills.
 This asignment was also rather easy for me to do. It only took me one class period for me to complete this assignment. 
 One lesson I learned was to pay attention to small details. I went checking every filet, extrude, and hole only to realize that I forgot to mirror two features. I spent a lot of time trying to figure out what the problem was but I did eventualy realize that I forgot to mirror something even though it looked completley right to my brain.
 
+## Onshape_Multipart_Studio
+### Description
+In this assignment I made a microphone stand in onshape. This required the use of multiple parts as it was quite sophisticated and complex. If you notice I have it upside down as I created the sketch on the wrong plane. Oh well i'm human like the rest of us and is to lazy to fix such small irelavent mistakes.
+
+### Evidence
+![image](https://github.com/solomon4000/eng3/blob/main/Screenshot%202024-01-07%20185224.png)
+
+### Document Link
+[Document](https://cvilleschools.onshape.com/documents/8dc95f82a347957a36093b26/w/5efdba9ff861aa81f4b4eb57/e/d74a9a315c8fc1ded22e967a)
+
+### Reflection 
+This is one of those assignments I don't like to do, not because of how difficult it is but rather because of how I have to do the same thing over and over with tiny variations each time. I would rather do something complex that ends up being satisfying in the end because of how complicated it is not doing one thing over and over but making part XYZ 3mm longer.
+
+## Onshape_Pliers
+
+### Description
+The purpose of this assignment was to make a pair of pliers in an assembaly. I was given the parts that I needed so that if I did the assembaly right it would consistently be correct. I did not like this assignment as like last time it was doing one assignment multiple times 
+
+
