@@ -11,11 +11,14 @@ led = digitalio.DigitalInOut(board.LED)
 led2=digitalio.DigitalInOut(board.D4)
 led2.direction=digitalio.Direction.OUTPUT
 led.direction = digitalio.Direction.OUTPUT
-
+Speaker=digitalio.DigitalInOut(board.D0)
+Speaker.direction=digitalio.Direction.OUTPUT
 while True:
     led.value = True
-    led.value=False
-    time.sleep(0.1)
+    Speaker.value=True
+    led2.value=False
+    time.sleep(0.025)
     led.value = False
-    led.value=True
-    time.sleep(0.1)
+    led2.value=True
+    Speaker.value=False
+    time.sleep(0.025)
