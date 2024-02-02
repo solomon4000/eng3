@@ -1,5 +1,4 @@
-#this shouldnt be so difficult
-#save me and all of addies mosfets
+
 #Why won't it work?
 import time
 import digitalio
