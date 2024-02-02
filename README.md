@@ -1,5 +1,5 @@
 # CircuitPython
-This repository will actually serve as an aid to help you get started with your own template.  You should copy the raw form of this readme into your own, and use this template to write your own.  If you want to draw inspiration from other classmates, feel free to check [this directory of all students!](https://github.com/chssigma/Class_Accounts).
+
 ## Table of Contents
 * [Table of Contents](#TableOfContents)
 * [Hello_CircuitPython](#Hello_CircuitPython)
@@ -292,4 +292,43 @@ while True:
 I have found that the best way to ensure succes is to make sure that the lcd is not plugged in before the board gets turned on. Once the board opens you can connect the LCD to the board.
 
 ## Photo interupter
+
+### Description
+This assignment was not to difficult because I used some code I found from last year. 
+I was instructed to make a photo interupter count how many times I passed a solid object through it.
+This was very simple as I just had to count how many times a certain pin was activated.
+
+### Evidence
+//update this later
+
+### Code
+```python
+#this shouldnt be so difficult
+#Why won't it work?
+import time
+import digitalio
+import board
+from digitalio import DigitalInOut, Direction, DriveMode, Pull
+print("srdg")
+photointerupter=digitalio.DigitalInOut(board.D7)
+photointerupter.direction.INPUT
+photointerupter.pull = Pull.UP
+now = time.monotonic()  # Time in seconds since power on
+count=0
+thing=False
+while True:
+    if photointerupter.value:
+         count=count+1
+         print("test")
+    if (now + 4) < time.monotonic():  # If 3 milliseconds elapses
+        print(count)
+        count=0
+        now = time.monotonic()
+    time.sleep(0.05)
+```
+### Reflection
+This assignment was not very difficult as I just had to count how many times it passed through the detector. 
+You will have noticed my comments at the top and that is because with circuit python I have spent more time trying to get code
+to upload to the board than I have spent getting the code to work.
+
 
