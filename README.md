@@ -263,7 +263,7 @@ I solved this problem in the end however as I found that the LCD was drawing to 
 //fill this in later
 
 ### Code
-'''python
+```python
 import rotaryio
 import board
 import neopixel
@@ -287,7 +287,7 @@ while True:
     if button.value and button_state == "pressed":
         print("Button is pressed")
         button_state = None
-'''
+```
 ### Reflection
 I have found that the best way to ensure succes is to make sure that the lcd is not plugged in before the board gets turned on. Once the board opens you can connect the LCD to the board.
 
