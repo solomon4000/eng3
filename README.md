@@ -251,3 +251,45 @@ The purpose of this assignment was to make a pair of pliers in an assembaly. I w
 
 ### Reflection
 This is another assignment that took a long time because I had to make a copy of one thing and make a slight variation of it each time. I would rather be doing one assignment that is more complicated like an engine, mechanical transmission or turbojet, because it would be really satisfying in the end seeing the result.
+
+
+## Rotary_Encoder_LCD
+### Description
+In this assignment I made an lcd print stop, go slowly, or go. I did this using the rotary encoder with the built in LCD library. 
+I despised this assignment with every fiber of my being as I spent 8 hours trying to get a peice of code with 9 lines on it to work. 
+I solved this problem in the end however as I found that the LCD was drawing to much power on startup (though there weren't any capacitors of any size on the board which makes it bizare). 
+
+### Evidence
+//fill this in later
+
+### Code
+'''python
+import rotaryio
+import board
+import neopixel
+import digitalio
+from lib.lcd.lcd import LCD
+from lib.lcd.i2c_pcf8574_interface import I2CPCF8574Interface
+enc = rotaryio.IncrementalEncoder(board.D4, board.D3, divisor=2)
+lcd = LCD(I2CPCF8574Interface(board.I2C(), 0x3f), num_rows=2, num_cols=16)
+led = neopixel.NeoPixel(board.NEOPIXEL, 1)
+led.brightness = 0.3
+led[0] = (255, 0, 0)
+button = digitalio.DigitalInOut(board.D2)
+button.direction = digitalio.Direction.INPUT
+button.pull = digitalio.Pull.UP
+button_state = None
+lcd.set_cursor_pos(0,0)
+lcd.print("Hello world")
+while True:
+    if not button.value and button_state is None:
+        button_state = "pressed"
+    if button.value and button_state == "pressed":
+        print("Button is pressed")
+        button_state = None
+'''
+### Reflection
+I have found that the best way to ensure succes is to make sure that the lcd is not plugged in before the board gets turned on. Once the board opens you can connect the LCD to the board.
+
+## Photo interupter
+
