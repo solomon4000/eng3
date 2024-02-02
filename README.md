@@ -423,5 +423,4 @@ The project we are supposed to do is more complex than the project last year and
 In this time my sophmore freind has already completed her project for this semester. 
 With all due respect I want to get started working on something now. I can't spend the entire year doing 3D cad and small code assignments.
 
-## Ir_sensor
 
