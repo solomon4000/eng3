@@ -331,4 +331,97 @@ This assignment was not very difficult as I just had to count how many times it 
 You will have noticed my comments at the top and that is because with circuit python I have spent more time trying to get code
 to upload to the board than I have spent getting the code to work.
 
+## Stepper motor and limit switches
+### Description
+For this assignment I had to make a stepper spin one way and then spin the other when a switch is toggled. I did this with interupts and such. This assignment was not to difficult.
+
+### Evidence
+//Update this later
+### Code
+```python
+"""
+Engineering 3 
+Limit Switch + Stepper Motor STARTER CODE
+
+"""
+
+# Imports the needed libraries for your board. 
+import asyncio
+import board
+import keypad
+import time
+import digitalio
+from lib.adafruit_motor import stepper
+
+
+DELAY = 0.002   # Sets the delay time for in-between each step of the stepper motor.
+STEPS = 200    # Sets the number of steps. 100 is half a full rotation for the motor we're using. 
+
+# Set up the digital pins used for the four wires of the stepper motor. 
+coils = (
+    digitalio.DigitalInOut(board.D9),   # A1
+    digitalio.DigitalInOut(board.D10),  # A2
+    digitalio.DigitalInOut(board.D11),  # B1
+    digitalio.DigitalInOut(board.D12),  # B2
+)
+
+# Sets each of the digital pins as an output.
+for coil in coils:
+    coil.direction = digitalio.Direction.OUTPUT
+
+# Creates an instance of the stepper motor so you can send commands to it (using the Adafruit Motor library). 
+motor = stepper.StepperMotor(coils[0], coils[1], coils[2], coils[3], microsteps=None)
+
+
+async def catch_pin_transitions(pin):
+    # Print a message when pin goes low and when it goes high.
+    with keypad.Keys((pin,), value_when_pressed=False) as keys:
+            event = keys.events.get()
+            print("kjhgfdsdddddd")
+            if event:
+                print("fdgh")
+                if event.pressed:
+                    print("Limit Switch was pressed.")
+                    # FILL THIS IN: MAKE THE MOTOR ARM SPIN BACKWARDS. 
+                    for step in range(STEPS):
+                        motor.onestep( style=stepper.DOUBLE)
+                        
+                        time.sleep(DELAY)
+
+
+                elif event.released:
+                    print("Limit Switch was released.")
+            await asyncio.sleep(0)
+
+async def run_motor(DELAY):
+        print("motorrunning")
+        for step in range(STEPS):
+            motor.onestep(direction=stepper.BACKWARD, style=stepper.DOUBLE)
+                
+            time.sleep(DELAY)
+
+async def main():
+    while(True):
+        motor_task=asyncio.create_task(run_motor(DELAY))
+        print("motor")
+        interrupt_task = asyncio.create_task(catch_pin_transitions(board.D0))
+        print("main")
+        
+        # FILL THIS IN: 
+        # CREATE ANOTHER TASK CALLED: motor_task.
+        # USE asyncio.create_task() to call the run_motor() function you wrote.
+        
+        await asyncio.gather(interrupt_task, motor_task)
+while True:
+    asyncio.run(main())
+```
+### Reflection
+I did this assignment fine. It took me a long time to get it to work with circuit python. This assignment is starting to put me a little on the end of the line.
+Last year I started working on a project a month or two after doing some code. I then learned a little more code near the end of the semester
+and worked on another project in the second semester. I have spent the last 5 months doing code, onshape, and more code.
+The project we are supposed to do is more complex than the project last year and I am given less time.
+In this time my sophmore freind has already completed her project for this semester. 
+With all due respect I want to get started working on something now. I can't spend the entire year doing 3D cad and small code assignments.
+
+## Ir_sensor
 
