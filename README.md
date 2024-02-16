@@ -424,3 +424,17 @@ In this time my sophmore freind has already completed her project for this semes
 With all due respect I want to get started working on something now. I can't spend the entire year doing 3D cad and small code assignments.
 
 
+## Onshape robot gripper
+### Description
+In this assignment I have been told to create a working robot arm in onshape. I was bored so I decided to use 24 arms. I can't think of anything else to add to this. I used a basic worm gear.
+
+### Evidence
+![image](https://github.com/solomon4000/eng3/assets/90640484/d7c7e77f-3100-449c-9729-0ec4dfe9de06)
+### Document link
+[document](https://cvilleschools.onshape.com/documents/32173eae7107252bfa0d62d8/w/ae7835291b68435ee0f92a57/e/834003dde04d9d3635203690) 
+
+### Reflection
+This is hopefully the last assignment that I have to do before a big project. I am really concerned if I will have enough time to finish the project at this point. I am really strugling.
+
+
+
