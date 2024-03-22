@@ -436,5 +436,11 @@ In this assignment I have been told to create a working robot arm in onshape. I 
 ### Reflection
 This is hopefully the last assignment that I have to do before a big project. I am really concerned if I will have enough time to finish the project at this point. I am really strugling.
 
+## IR Sensor
+
+### Description
+This assignment I had to write code that counted how many times I waved my hand in front of it. I do not understand why I had to do this because an ultrasonic sesnsor would work better.
+
+### Evidence
 
 
