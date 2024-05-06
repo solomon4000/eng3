@@ -250,7 +250,7 @@ The purpose of this assignment was to make a pair of pliers in an assembaly. I w
 [Document](https://cvilleschools.onshape.com/documents/a3e877a128ffd4c685250757/w/b4915ca675761f21034702f9/e/96ee70b03795abed110595d8)
 
 ### Reflection
-This is another assignment that took a long time because I had to make a copy of one thing and make a slight variation of it each time. I would rather be doing one assignment that is more complicated like an engine, mechanical transmission or turbojet, because it would be really satisfying in the end seeing the result.
+This is another assignment that took a long time because I had to make a copy of one thing and make a slight variation of it each time. I would rather be doing one assignment that is more complicated like an engine, mechanical transmission or turbojet, because it would be really satisfying in the end seeing the result. I learned how to have patience with onshape while working on this. 
 
 
 ## Rotary_Encoder_LCD
@@ -289,7 +289,7 @@ while True:
         button_state = None
 ```
 ### Reflection
-I have found that the best way to ensure succes is to make sure that the lcd is not plugged in before the board gets turned on. Once the board opens you can connect the LCD to the board.
+I have found that the best way to ensure succes is to make sure that the lcd is not plugged in before the board gets turned on. Once the board opens you can connect the LCD to the board. This is because it creates a power surge on the microcontroller.
 
 ## Photo interupter
 
@@ -299,7 +299,8 @@ I was instructed to make a photo interupter count how many times I passed a soli
 This was very simple as I just had to count how many times a certain pin was activated.
 
 ### Evidence
-//update this later
+![A14](https://github.com/solomon4000/eng3/assets/90640484/ae3faca4-968e-4ab2-bb7c-e5fdfb22e200)
+
 
 ### Code
 ```python
